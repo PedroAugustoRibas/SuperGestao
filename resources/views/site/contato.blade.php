@@ -1,18 +1,6 @@
-
-<div class="topo">
-
-    <div class="logo">
-        <img src="img/logo.png">
-    </div>
-
-    <div class="menu">
-        <ul>
-            <li><a href="{{ route('site.index') }}">Principal</a></li>
-            <li><a href="{{ route('site.sobre') }}">Sobre Nós</a></li>
-            <li><a href="{{ route('site.contato') }}">Contato</a></li>
-        </ul>
-    </div>
-</div>
+@extends('site.layout.default')
+@section('title', 'Contato')
+@section('content')
 
 <div class="conteudo-pagina">
     <div class="titulo-pagina">
@@ -21,21 +9,21 @@
 
     <div class="informacao-pagina">
         <div class="contato-principal">
-            <form>
-                <input type="text" placeholder="Nome" class="borda-preta">
+            <form action={{route('site.contato')}} method="get">
+                <input name="nome" type="text" placeholder="Nome" class="borda-preta">
                 <br>
-                <input type="text" placeholder="Telefone" class="borda-preta">
+                <input name="telefone" type="text" placeholder="Telefone" class="borda-preta">
                 <br>
-                <input type="text" placeholder="E-mail" class="borda-preta">
+                <input name="email" type="text" placeholder="E-mail" class="borda-preta">
                 <br>
-                <select class="borda-preta">
-                    <option value="">Qual o motivo do contato?</option>
-                    <option value="">Dúvida</option>
-                    <option value="">Elogio</option>
-                    <option value="">Reclamação</option>
+                <select name="motivo" class="borda-preta">
+                    <option value="1">Qual o motivo do contato?</option>
+                    <option value="2">Dúvida</option>
+                    <option value="3">Elogio</option>
+                    <option value="4">Reclamação</option>
                 </select>
                 <br>
-                <textarea class="borda-preta">Preencha aqui a sua mensagem</textarea>
+                <textarea name="mensagem" class="borda-preta">Preencha aqui a sua mensagem</textarea>
                 <br>
                 <button type="submit" class="borda-preta">ENVIAR</button>
             </form>
@@ -61,3 +49,4 @@
         <img src="{{asset('img/mapa.png')}}">                
     </div>
 </div>
+@endsection

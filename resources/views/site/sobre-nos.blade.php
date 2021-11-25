@@ -1,18 +1,11 @@
 
-<div class="topo">
 
-    <div class="logo">
-        <img src="img/logo.png">
-    </div>
+@extends('site.layout.default')
 
-    <div class="menu">
-        <ul>
-            <li><a href="{{ route('site.index') }}">Principal</a></li>
-            <li><a href="{{ route('site.sobre') }}">Sobre Nós</a></li>
-            <li><a href="{{ route('site.contato') }}">Contato</a></li>
-        </ul>
-    </div>
-</div>
+@section('title', 'sobre')
+
+@section('content')
+
 
 <div class="conteudo-pagina">
     <div class="titulo-pagina">
@@ -43,3 +36,4 @@
         <img src="{{asset('img/mapa.png')}}"> 
     </div>
 </div>
+@endsection

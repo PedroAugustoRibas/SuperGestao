@@ -1,20 +1,9 @@
 
 @extends('site.layout.default')
 
-<div class="topo">
+@section('title', 'Home')
 
-    <div class="logo">
-        <img src="{{asset('img/logo.png')}}">
-    </div>
-
-    <div class="menu">
-        <ul>
-            <li><a href="{{ route('site.index') }}">Principal</a></li>
-            <li><a href="{{ route('site.sobre') }}">Sobre Nós</a></li>
-            <li><a href="{{ route('site.contato') }}">Contato</a></li>
-        </ul>
-    </div>
-</div>
+@section('content')
 
 <div class="conteudo-destaque">
 
@@ -33,7 +22,7 @@
         </div>
 
         <div class="video">
-                <img src="{{asset('img/player_video.png')}}">
+                <img src="{{asset('img/player_video.jpg')}}">
         </div>
     </div>
 
@@ -62,4 +51,5 @@
         </div>
     </div>
 </div>
+@endsection
    
