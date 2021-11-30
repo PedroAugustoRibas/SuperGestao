@@ -9,24 +9,9 @@
 
     <div class="informacao-pagina">
         <div class="contato-principal">
-            <form action={{route('site.contato')}} method="get">
-                <input name="nome" type="text" placeholder="Nome" class="borda-preta">
-                <br>
-                <input name="telefone" type="text" placeholder="Telefone" class="borda-preta">
-                <br>
-                <input name="email" type="text" placeholder="E-mail" class="borda-preta">
-                <br>
-                <select name="motivo" class="borda-preta">
-                    <option value="1">Qual o motivo do contato?</option>
-                    <option value="2">Dúvida</option>
-                    <option value="3">Elogio</option>
-                    <option value="4">Reclamação</option>
-                </select>
-                <br>
-                <textarea name="mensagem" class="borda-preta">Preencha aqui a sua mensagem</textarea>
-                <br>
-                <button type="submit" class="borda-preta">ENVIAR</button>
-            </form>
+            @component('site.layout._components.form_contato')
+                <p>Iremos analisar seu contato</p>
+            @endcomponent
         </div>
     </div>  
 </div>

@@ -17,9 +17,10 @@ use App\Http\Controllers\SobreController;
 */
 
 Route::get('/', [HomeController::class, 'home'])->name('site.index');
-Route::get('/sobre-nos', [SobreController::class, 'sobre'])->name('site.sobre');;
-Route::get('/contato',[ContatoController::class, 'contato'])->name('site.contato');;
-Route::get('/login',[ContatoController::class, 'contato'])->name('site.login');;
+Route::get('/sobre-nos', [SobreController::class, 'sobre'])->name('site.sobre');
+Route::get('/contato',[ContatoController::class, 'contato'])->name('site.contato');
+Route::post('/contato',[ContatoController::class, 'saveContato'])->name('site.saveContato');;
+Route::get('/login',[ContatoController::class, 'contato'])->name('site.login');
 
 Route::prefix('/app')->group(function ()
 {
